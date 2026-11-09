@@ -1,8 +1,8 @@
 {
   "name": "pathclick",
   "displayName": "pathclick",
-  "version": "0.1.0",
-  "description": "File paths in Windows Terminal work like links: underline on hover, Ctrl+Click opens the file, Ctrl+Shift+Click picks the app.",
+  "version": "0.2.0",
+  "description": "Portable file links and native app opening for coding agents. Optional Windows Terminal hover and Ctrl+Click helper.",
   "author": {
     "name": "sa1ntsinner",
     "url": "https://github.com/sa1ntsinner"
@@ -10,5 +10,5 @@
   "homepage": "https://github.com/sa1ntsinner/pathclick",
   "repository": "https://github.com/sa1ntsinner/pathclick",
   "license": "MIT",
-  "keywords": ["windows", "windows-terminal", "paths", "open-file", "autohotkey"]
+  "keywords": ["file-links", "agent-skills", "cross-platform", "terminal", "paths"]
 }

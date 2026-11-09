@@ -19,4 +19,4 @@ if (-not $exe) {
     'pathclick: AutoHotkey v2 is not installed, so file paths in the terminal are not clickable. Install it with: winget install AutoHotkey.AutoHotkey'
     exit 0
 }
-Start-Process -FilePath $exe -ArgumentList "`"$script`""
+Start-Process -FilePath $exe -ArgumentList "`"$script`"" -WindowStyle Hidden
