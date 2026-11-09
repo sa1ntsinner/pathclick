@@ -6,12 +6,12 @@ Windows, macOS and Linux. Relative paths resolve from the agent's project folder
 ## Install for your agents
 
 ```sh
-npx skills add sa1ntsinner/pathclick -g -y
+npx skills add sa1ntsinner/pathclick -g -y -a codex claude-code cursor gemini-cli
 ```
 
-Requires **Node.js 22.20+** and Git. Installs the skill and its bundled helper for
-your selected/detected agent, including Claude Code, Codex, Cursor or Gemini CLI.
-Add `--all` to target every agent supported by [skills](https://github.com/vercel-labs/skills).
+Requires **Node.js 22.20+** and Git. Installs the skill and bundled helper for
+these four agents. Change the list after `-a` for [other agents](https://github.com/vercel-labs/skills).
+Agents without global skill support need project installation: omit `-g`.
 Restart your agent, then ask it to use **pathclick** to link or open a file.
 
 ## Use without an agent
