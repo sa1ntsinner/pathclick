@@ -1,0 +1,12 @@
+{
+  "name": "pathclick",
+  "description": "pathclick: clickable file paths in Windows Terminal",
+  "owner": { "name": "sa1ntsinner" },
+  "plugins": [
+    {
+      "name": "pathclick",
+      "source": "./",
+      "description": "File paths in Windows Terminal work like links: underline on hover, Ctrl+Click opens the file, Ctrl+Shift+Click picks the app."
+    }
+  ]
+}
