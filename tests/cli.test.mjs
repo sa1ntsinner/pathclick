@@ -1,13 +1,13 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { spawnSync } from 'node:child_process';
-import { mkdtempSync, mkdirSync, writeFileSync, rmSync } from 'node:fs';
+import { mkdtempSync, mkdirSync, writeFileSync, rmSync, realpathSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import path from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 
 const cli = fileURLToPath(new URL('../skills/pathclick/scripts/pathclick.mjs', import.meta.url));
-const root = mkdtempSync(path.join(tmpdir(), 'pathclick-'));
+const root = realpathSync(mkdtempSync(path.join(tmpdir(), 'pathclick-')));
 mkdirSync(path.join(root, 'src'));
 const file = path.join(root, 'src', 'hello world #1.txt');
 writeFileSync(file, 'hello');

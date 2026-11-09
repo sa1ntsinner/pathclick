@@ -4,7 +4,7 @@
   "description": "Portable file links and native file opening for coding agents and terminals",
   "type": "module",
   "bin": { "pathclick": "skills/pathclick/scripts/pathclick.mjs" },
-  "files": ["skills", "scripts", ".claude-plugin", "hooks", "docs"],
+  "files": ["skills/pathclick/SKILL.md", "skills/pathclick/scripts/*.mjs", "skills/pathclick/scripts/*.ps1", "skills/pathclick/scripts/*.py", "scripts", ".claude-plugin", "hooks", "docs"],
   "scripts": { "test": "node --test tests/*.test.mjs" },
   "engines": { "node": ">=22.20.0" },
   "repository": { "type": "git", "url": "git+https://github.com/sa1ntsinner/pathclick.git" },
