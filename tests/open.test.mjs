@@ -52,3 +52,12 @@ test('launcher failures and unsupported systems are reported instead of claiming
     assert.throws(() => cli.openPath(target, false, 'linux'), /ENOENT/);
   } finally { spy.mock.restore(); }
 });
+
+test('macOS can compile the native chooser script without opening a dialog', { skip: process.platform !== 'darwin' }, () => {
+  let script;
+  const spy = mock.method(childProcess, 'spawnSync', (_file, args) => { script = args[1]; return { status: 0 }; });
+  try { cli.openPath(target, true, 'darwin'); }
+  finally { spy.mock.restore(); }
+  const result = childProcess.spawnSync('osacompile', ['-o', path.join(root, 'chooser.scpt'), '-e', script], { encoding: 'utf8' });
+  assert.equal(result.status, 0, result.stderr);
+});
