@@ -3,16 +3,14 @@
 Open files mentioned by coding agents without copying paths into another app.
 Windows, macOS and Linux. Relative paths resolve from the agent's project folder.
 
-## Install for your agents
+## Install
 
 ```sh
-npx skills add sa1ntsinner/pathclick -g -y -a codex claude-code cursor gemini-cli
+npx skills add sa1ntsinner/pathclick
 ```
 
-Requires **Node.js 22.20+** and Git. Installs the skill and bundled helper for
-these four agents. Change the list after `-a` for [other agents](https://github.com/vercel-labs/skills).
-Agents without global skill support need project installation: omit `-g`.
-Restart your agent, then ask it to use **pathclick** to link or open a file.
+Run in your terminal, then choose agents, project or global installation, and
+symlink or copy. Requires **Node.js 22.20+** and Git. Restart your agent afterward.
 
 ## Use without an agent
 
